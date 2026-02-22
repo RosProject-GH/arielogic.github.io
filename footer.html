@@ -67,8 +67,13 @@
   padding: 2rem;
   font-size: 15px;
   color: #4b5564;
-  background: #000533;
 }
+      @media (prefers-color-scheme: dark) {
+        background: #000533;
+      }
+      @media (prefers-color-scheme: light) {
+        background: #adb5ff;
+      }
 
 .footer__navi-heading {
   font-weight: 600;
