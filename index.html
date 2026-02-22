@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 保存する際はCtrl+S または Cmd+S を押してください。 デプロイから新バージョンに更新する前に"デプロイをテスト"から一度試してから新バージョンに更新してください。(保存しないと内容は変更されません) -->
+    <!-- 変更許可者 Ros_project -->
+    <base target="_top">
+    <meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;800&display=swap" rel="stylesheet">
+    <!-- ↑フォント設定 -->
+    <!-- ↓CSS設定 -->
+    <style>
+      /* 最初に追加してください */
+      html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+      body{
+  font-family: "Noto Sans JP", sans-serif;
+      }
+      p {
+        /*　↓pのマージン設定　*/
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      /* ↓aタグ色指定 */
+      a{
+        text-decoration: none;
+        color: #000;
+        }
+        @media (prefers-color-scheme: dark) {
+  a {
+    color: #fff;
+  }
+}
+.fp { /*フェードインテキスト*/
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-out, transform 1s ease-out;
+  transition-delay: calc(var(--delay) * 0.5s);
+  font-size: 30px;
+  font-weight: lighter;
+  text-align: center;
+  padding-bottom:60px;
+  background: linear-gradient(10deg, #1C89F8 40%, #C15EE9 50%, #F44E27 70%);
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+.fp span {
+  text-size: 50px;
+  font-weight: 800;
+}
+
+.fp.visible  {
+  opacity: 1;
+  transform: translateY(0);
+}
+        /*↓横線の設定*/
+        hr {
+          margin: 20px;
+          widrh: 100%;
+          height: 1px;
+          background-color: #000;
+          filter: drop-shadow(0px 0px 10px #ffffff);
+        }
+        .center {
+          text-align: center;
+        }
+        /*ダークモード*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #fff;
+  }
+}
+      /* ↓メインUI */
+      .main {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+      }
+      .on {
+        padding-bottom: 130px;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+              .padding-top10 {
+          padding-top: 10px;
+        }
+        .padding-top20 {
+          padding-top: 20px;
+        }
+        .padding-top40 {
+          padding-top: 40px;
+        }
+        .padding-top70 {
+          padding-top: 70px;
+        }
+        .padding-top120 {
+          padding-top: 120px;
+        }
+        .padding-top400 {
+          padding-top: 400px;
+        }
+.display-flex {
+  display: flex;
+}
+.display-float {
+  float: left;
+}
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+  const textElements = document.querySelectorAll('.fp');
+  
+  textElements.forEach((element, index) => {
+    const position = element.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.100;
+
+    if (position < screenPosition) {
+      element.style.setProperty('--delay', index);
+      element.classList.add('visible');
+    }
+  });
+});
+    </script>
+    <body>
+      <?!= include('header') ?><!-- header-->
+            <div class="padding-top40"></div>
+      <div class="main">
+        <div class="center">
+          <div class="header-bg">
+      <div class="main-logo">
+        <div class="padding-top70"></div>
+      <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-b.png" width="300" height="auto" alt="logo">
+      <p class="subtitle">学生が運営するプログラミングチーム</p>
+      </div>
+          </div>
+          <div class="on">
+      <style>
+        .subtitle {
+          font-size: 20px;
+          color: #ffffff;
+          font-weight: 100;
+        }
+        .top-p {
+          font-size: 17px;
+        }
+        .header-bg {
+    height: 300px;
+    width: 100%;
+background: linear-gradient(180deg, #178AF8, #00000000);
+    background-size: cover;
+    background-position: center;
+}
+      </style>
+        <div class="padding-top40"></div>
+        <style>
+          .s1 {
+            text-align: left;
+          }
+          .s2 {
+            text-align: right;
+          }
+          .s-title {
+            font-size: 30px;
+            font-weight: 900;
+          }
+          .s-img {
+  float: left;          /* 画像を左に回り込ませる */
+  margin-right: 20px;   /* テキストとの間の余白 */
+  margin-bottom: 10px;  /* 下にも余白 */
+  border-radius: 20px;
+          }
+          .s-a {
+            transition:0.3s all;
+            width: 100%;
+            height: 100%;
+            background-color: #00000000;
+            border-radius: 0px;
+  overflow: hidden; /* はみ出した部分を隠す */
+  text-overflow: ellipsis; /* はみ出た部分を「…」で省略する */
+          }
+          .s-a:hover {
+            transition:0.3s all;
+            width: 100%;
+            height: 100%;
+            background-color: #E2E3E0;
+            border-radius: 30px;
+  overflow: hidden; /* はみ出した部分を隠す */
+  text-overflow: ellipsis; /* はみ出た部分を「…」で省略する */
+          }
+
+          @media (prefers-color-scheme: dark) {
+  .s-a:hover {
+    background-color: #4c4c4c;
+  }
+}
+
+          .s-p {
+  padding-left: 30px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 1.6;
+          }
+          .s-p span {
+          font-weight: 400;
+          background: linear-gradient(transparent 80%, #679fe0 80%);
+        }
+        @media (max-width: 600px) {
+  .s-p {
+    padding-left: 0;       /* スマホでは左の余白をなくす */
+    margin-top: 20px;      /* 画像の下に余白を作る */
+  }
+}
+          .b-c {
+            font-size: 24px;
+          }
+        </style>
+        <p class="fp">ウェブアプリやチャットツール。</p>
+        <p class="fp">アプリストア、OS。</p>
+        <p class="fp">Arielogicは<span>技術</span>によって<br>生活を<span>豊か</span>にすることに挑戦します。</p>
+        <div class="padding-top120"></div>
+        <div class="s1">
+          <p class="s-title">Arielogicとは</p>
+          <div class="padding-top20"></div>
+          <div class="display-float">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/IMG_2197.jpg" width="400" height="300" alt="logo" class="s-img">
+          <p class="s-p">中学生三人が主に<span>ウェブサービス</span>を制作するチームです。
+          <br>チーム名である「Arielogic」は、<span>「軽やか」「幻想的」</span>という意味を含む、<span>「Ariel」</span>と、機械の<span>「論理」「システム」</span>などの意味を含む<span>「logic」</span>を組み合わせたものになっていて、<span>様々な幻想的な体験ができるシステムを誰にでも使えるようにしたい</span>という思いが込められています。
+          <br>現在は学校向けウェブサービス、勉強を効率化させるウェブアプリ、翻訳アプリ、LinuxをベースとしたOSの開発、チャットツールの開発などを行っています。主なメンバーは三人ですが、ネット上の様々な方から開発の協力をしていただいています。
+          <br>また、開発をして欲しいものなども常時受け付けているので、提案がありましたら下のフォームに入力をお願いします。</p>
+          </div><!--float-->
+        </div>
+
+<div class="padding-top40"></div>
+<div class="padding-top40"></div>
+          <div class="s1">
+          <p class="s-title">進行中のプロジェクト</p>
+          <div class="padding-top20"></div>
+
+<div class="s-a">
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-Apps%2B.png" width="175" height="175" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">Arielogic Apps</b><br>Arielogicが運営しているアプリストアです。配布されているアプリはどれもArielogicで開発しているものです。
+          <br>このアプリストアで配布されているものは全ての環境での動作は保証されておらず、<span>Arielogicはこのアプリストアで配布されているアプリによって受けた、端末の不具合などの損害の責任は一切負いません。</span>なお、バグ等の報告があっても必ず修正されるとは限りません。</p>
+            </div><!--flex-->
+          </div>
+
+          <div class="padding-top40"></div>
+
+<div class="s-a">
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-Blog.png" width="175" height="175" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">Arielogic Blog</b><br>Arielogicのメンバーの日常や開発などを書いたブログです。</p>
+            </div><!--flex-->
+          </div>
+
+          <div class="padding-top40"></div>
+
+<div class="s-a">
+  <a href="https://chat.devlinkhub.net/">
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/DevLinkHub2.png" width="175" height="175" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">DevLinkHub</b><br>開発も会話も、ここひとつで。
+          <br>DevLinkHubは、開発者がつながり、学び、協力できるオールインワンプラットフォームです。チャットでの相談や雑談はもちろん、プロジェクト管理やタスク進行もサポート。GitHubのようにコードのやり取りを追跡したり、個人やチームの進捗を可視化することで、開発作業を効率的に進められます。DevLinkHubは、情報・コミュニティ・プロジェクト管理をひとつにまとめた、開発者のためのハブです。</p>
+          </div><!--flex-->
+  </a>
+</div>
+          </div>
+
+        <div class="padding-top40"></div>
+        <div class="s1">
+          <p class="s-title">その他</p>
+        </div>
+          <div class="padding-top20"></div>
+        <style>
+          .container {
+  display: flex;          /* 横並びにする */
+  gap: 40px;              /* 要素間の隙間 */
+}
+
+.o-s {
+  text-align: center;     /* 画像とテキストを中央揃え */
+  font-size: 18px;
+  color: #000;
+    width: 200px;
+  height: 220px;
+  background: #d6d6d6;
+  border-radius: 20px;
+  transition:0.5s all;
+}
+.o-s:hover {
+  filter: drop-shadow(0px 0px 5px #000);
+}
+
+@media (prefers-color-scheme: dark) {
+  .o-s:hover {
+    filter: drop-shadow(0px 0px 7px #b7b7b7);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .o-s {
+    background-color: #383838;
+    color: #fff;
+  }
+}
+
+.o-s p {
+  padding-top: 10px;
+}
+
+.o-s-i {
+  width: 200px;
+  height: 180px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  .o-s-i {
+    background-color: #545454;
+  }
+}
+.o-s img {
+  padding-top: 20px;
+  width: 140px;           /* 画像サイズ（お好みで変更） */
+  height: auto;
+  display: block;         
+  margin: 0 auto;         /* 画像を中央揃え */
+}
+          </style>
+        <div class="container">
+  <div class="o-s">
+    <a href="<?= getAppUrl() ?>?page=member">
+    <div class="o-s-i">
+    <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/members.png" alt="メンバー">
+    </div>
+    <p>メンバー</p>
+    </a>
+  </div>
+
+  <div class="o-s">
+    <div class="o-s-i">
+    <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/dev.png" alt="画像">
+    </div>
+    <p>開発中</p>
+  </div>
+
+  <div class="o-s">
+    <div class="o-s-i">
+    <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/dev.png" alt="画像">
+    </div>
+    <p>開発中</p>
+  </div>
+</div>
+
+      </div><!--on-->
+      </div><!--center-->
+      </div><!--main-->
+  </body>
+</html>
