@@ -134,17 +134,61 @@
 });
     </script>
     <body>
-      <?!= include('header') ?><!-- header-->
+
+      <!--header-->
+<div class="padding-top30"></div>
+<div class="header">
+  <div class="header-logo-wrap">
+    <div class="header-logo">
+      <a href="https://script.google.com/macros/s/AKfycby6v0qy1N3pqkObjwFp8uEr-znA8JYHOPf3aIxp4YJsVC_4In2kINMpcM7grHZcnQA/exec">
+        <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-b.png"
+             width="150" height="auto" alt="Arielogic" class="header-img">
+             <style>
+              .header-img {
+                padding-top: 10px;
+                padding-left: 30px;
+              }
+              </style>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+          .padding-top30 {
+          padding-top: 30px;
+        }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 25%;
+    width: 50%;
+background-color: rgba(4, 17, 114, 0.4);
+    border-radius: 30px;
+    height: 60px;
+    padding: 30px;
+    z-index: 9999; /* ← ここを強めに */
+    backdrop-filter: blur(3px);
+    filter: drop-shadow(0px 5px 5px #000);
+    transition:0.5s all;
+  }
+  .header-logo {
+    transition: 1s all;
+    filter: drop-shadow(0px 0px 5px #ffffff);
+  }
+</style>
+      <!--header-->
+      
             <div class="padding-top40"></div>
       <div class="main">
         <div class="center">
-          <div class="header-bg">
       <div class="main-logo">
         <div class="padding-top70"></div>
       <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-b.png" width="300" height="auto" alt="logo">
       <p class="subtitle">学生が運営するプログラミングチーム</p>
       </div>
-          </div>
           <div class="on">
       <style>
         .subtitle {
@@ -155,13 +199,6 @@
         .top-p {
           font-size: 17px;
         }
-        .header-bg {
-    height: 300px;
-    width: 100%;
-background: linear-gradient(180deg, #178AF8, #00000000);
-    background-size: cover;
-    background-position: center;
-}
       </style>
         <div class="padding-top40"></div>
         <style>
@@ -368,59 +405,4 @@ background: linear-gradient(180deg, #178AF8, #00000000);
       </div><!--center-->
       </div><!--main-->
   </body>
-    
-    <div class="padding-top30"></div>
-<div class="header">
-  <div class="header-logo-wrap">
-    <div class="header-logo">
-      <a href="https://script.google.com/macros/s/AKfycby6v0qy1N3pqkObjwFp8uEr-znA8JYHOPf3aIxp4YJsVC_4In2kINMpcM7grHZcnQA/exec">
-        <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Arielogic-b.png"
-             width="150" height="auto" alt="Arielogic" class="header-img">
-             <style>
-              .header-img {
-                padding-top: 10px;
-                padding-left: 30px;
-              }
-              </style>
-      </a>
-    </div>
-  </div>
-</div>
-
-<style>
-          .padding-top30 {
-          padding-top: 30px;
-        }
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    left: 25%;
-    width: 50%;
-background-color: rgba(4, 17, 114, 0.4);
-    border-radius: 30px;
-    height: 60px;
-    padding: 30px;
-    z-index: 9999; /* ← ここを強めに */
-    backdrop-filter: blur(3px);
-    filter: drop-shadow(0px 5px 5px #000);
-    transition:0.5s all;
-  }
-  .header:hover {
-    width:90%;
-    height: 200px;
-    transition:0.5s all;
-    left: 5%;
-  }
-  .header-logo-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .header-logo {
-    transition: 1s all;
-    filter: drop-shadow(0px 0px 5px #ffffff);
-  }
-</style>
 </html>
