@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- 保存する際はCtrl+S または Cmd+S を押してください。 デプロイから新バージョンに更新する前に"デプロイをテスト"から一度試してから新バージョンに更新してください。(保存しないと内容は変更されません) -->
+    <!-- 変更許可者 Ros_project -->
+    <base target="_top">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;800&display=swap" rel="stylesheet">
+    <!-- ↑フォント設定 -->
+    <!-- ↓CSS設定 -->
+    <style>
+      /* 最初に追加してください */
+      html{
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+      body{
+        font-family: "Noto Sans JP", sans-serif;
+      }
+      p {
+        /*　↓pのマージン設定　*/
+        margin: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+      /* ↓aタグ色指定 */
+      a{
+        text-decoration: none;
+        }
+        /*↓横線の設定*/
+        hr {
+          margin: 20px;
+          widrh: 100%;
+          height: 1px;
+          background-color: #000;
+          filter: drop-shadow(0px 0px 10px #ffffff);
+        }
+        .center {
+          text-align: center;
+        }
+        /*ダークモード*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #fff;
+  }
+}
+      /* ↓メインUI */
+      .main {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        padding-left: 1px;
+        padding-right: 1px;
+      }
+      .on {
+        padding-bottom: 130px;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+              .padding-top10 {
+          padding-top: 10px;
+        }
+        .padding-top20 {
+          padding-top: 20px;
+        }
+        .padding-top40 {
+          padding-top: 40px;
+        }
+        .padding-top70 {
+          padding-top: 70px;
+        }
+        .display-flex {
+          display: flex;
+        }
+    </style>
+    <body>
+      <?!= include('header') ?><!-- header-->
+      <div class="padding-top40"></div>
+      <div class="padding-top20"></div>
+      <div class="main">
+        <style>
+          .s1 {
+            text-align: left;
+          }
+          .s2 {
+            text-align: right;
+          }
+          .s-title {
+            font-size: 30px;
+            font-weight: 900;
+          }
+          .s-img {
+            border-radius: 30px;
+            filter: drop-shadow(0px 0px 15px #1f259b);
+          }
+          .s-p {
+            padding-left: 30px;
+            font-size: 18px;
+            font-weight: 100;
+          }
+          .s-p span {
+          font-weight: bold;
+          background: linear-gradient(transparent 60%, #679fe0 60%);
+        }
+          .b-c {
+            font-size: 24px;
+          }
+        </style>
+<div class="center">
+  <div class="on">
+        <div class="padding-top40"></div>
+          <div class="s1">
+          <p class="s-title">主なメンバー</p>
+          <div class="padding-top20"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/MintSky.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">MintSky</b>　Arielogicリーダー<br>2020年にScratchを始め、ゲームやアニメーションを制作してきた。Scratch引退後はGoogle Apps ScriptでWebアプリを開発している。C++が少しでき、HTML/CSS/JSはそこそこ扱える。Pythonは学習中で比較的得意。現在はArielogicのYouTubeチャンネル向けにPVや説明動画の編集も担当し、より質の高い作品づくりに取り組んでいる。また、新しい技術や表現方法にも興味を持ち、日々スキルを広げている。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/Ro_icon2X.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">えにい</b>　企画・制作部門　<br>初代Arielogicリーダー。<br>2022年からScratchで活動してきて、2025年夏ごろから学校用アプリを制作することになりメインの開発環境をGASに移行。2025年秋ごろにArielogicを設立。Scratchでの活動を通してUI制作が特技であり、ArielogicのページのUI全般を制作している。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/DevLinkHub2.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">DevLinkHub</b>　企画・制作部門（サーバー運営）<br>私は主に Python を用いた開発を行っており、特にビジネス向けチャットツール 「DevLinkHub」 の開発を手掛けています。また、 Ubuntu Server を活用した Web サービスの運営にも取り組んでおり、サーバー構築からサービス公開、運用まで幅広く経験しています。<br>
+日々の技術や開発ノウハウは Qiita、note、Zeen などで情報発信しており、コードの実装例や検証結果、運用上の工夫などを共有しています。さらに YouTube チャンネル では、PV動画や検証動画を通じて、開発中のツールやサービスの魅力を視覚的に伝える活動も行っています。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/RosProject-GH/Arielogic-main/refs/heads/main/yahhi.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">- やっひー -</b>　企画・制作・管理・広報部門<br>
+2021年からScratchを始め、2023年頃から@yahhi31110として活動。まだScratchは引退していないが、最近は活動をあまりしていない。最近やっていることについてはPythonでAIもどきを作っていたりGodotでゲームを作ろうとしていたりする。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/RosProject-GH/Arielogic-main/refs/heads/main/mitumun.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">みつむん</b>　管理・広報部門<br>
+２０２１年から２０２６年までＳｃｒａｔｃｈで活動。活動期間中はＤＯＯＲＳ　ＯＳ™シリーズに代表される仮想ＯＳの制作に励んでいた。法律と政治についての造詣が深いといわれる。２０２４年より政治系の任意団体の代表も務めている。実はプログラミングが苦手で、Arielogicの将来的な法人化を支援しようと企んでいたりするらしい。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/RosProject-GH/Arielogic-main/refs/heads/main/towa.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">towa</b>　UI部門<br>
+TowaPC　安心と楽しさを永遠に。
+初めまして。TowaPCのCEO、towa(towa0122)です。
+TowaPCは2018年10月16日ごろに創立し、2019年に現在の名前になり、ロゴも当時のものを修正して使っています。 
+2024年5月21日にはNecoOSのコンセプトと共にNECOPCとしてScratchに参入しました。NecoOSは完成には至りませんでしたが、私のデザインの原点はそこであると考えています。そして、現在は防災ソフトである「NekoQuakeNow」を製作中です。
+さて、今回えにい（Ros_project）様とのつながりでArielogic様と技術協力させていただけることになりました。どうぞよろしくお願いいたします。</p>
+          </div><!--flex-->
+         <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/RosProject-GH/Arielogic-main/refs/heads/main/9G5Wd9r46OJzRnN1771673661_2.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">Code-Crystal</b>　企画・制作・UI部門<br>
+HTMLやC言語を用いた開発を行っています。
+主にバイブコーディングというスタイルで、直感や流れを大切にしながら、アイデアを素早く形にしていく開発をしています。
+<br>
+Webサイトの制作からアプリケーション、各種ツールの開発まで、分野にとらわれず幅広く取り組んでいます。
+</p>
+          </div><!--flex-->
+         <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/RosProject-GH/Arielogic-main/refs/heads/main/mine.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">みね</b>　UI部門<br>
+Softoriaの代表取締役。2023年からScratchを始め、@utina-ntyuとして活動中。現在は「Spira防災」を開発していて、プログラミングよりもデザインのほうが得意。
+</p>
+          </div><!--flex-->
+        </div>
+
+          <div class="padding-top40"></div>
+          <div class="s1">
+          <p class="s-title">技術協力</p>
+          <div class="padding-top20"></div>
+          <div class="display-flex">
+          <img src="https://uploads.scratch.mit.edu/get_image/gallery/50932487_1700x1000.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">架空会社Nexrise</b>　明日に、光を。<br>皆さんはじめまして。架空会社Nexrise代表取締役の325999（本名イニシャルMK）です。
+　架空会社Nexriseは私自身がもう一度原点に立ち返るため、令和７年10月に設立しました。本社は「明日に、光を」というスローガンを掲げ、皆様を笑顔にできるよう、高品質な作品をたゆまぬ努力の下開発しています。
+<br>　私は数年前よりArielogic様の一員であるRos_project君と交流があり、その縁でこの度の偉大な開発計画に参画させていただけることとなりました。本社は同系列のTowaPC様と協力してArielogic様の製作した作品をScratchで公開するという極めて重大な任務を拝命しております。私はこの任務を完遂することができるよう、Arielogic様ならびに本計画に関連される全ての皆様と力を合わせて取り組んで参る所存です。</p>
+          </div><!--flex-->
+          <div class="padding-top40"></div>
+          <div class="display-flex">
+          <img src="https://raw.githubusercontent.com/Schoolife-official/Arielogic/refs/heads/main/towapc.png" width="200" height="200" alt="logo" class="s-img">
+          <p class="s-p"><b class="b-c">TowaPC</b><br>初めまして。TowaPC（Scratch内の架空会社） CEOのtowa(towa0122)です。
+このTowaPCという会社の起源は、”お店ごっこ”にあります。そしてTowaPCのロゴは当時定めたロゴをそのまま利用している形です。自然発生型の存在なので正式な設立日はないのですが、一応時期として2018年10月16日を設立日としています。2019年にはTOWAPCという名前を決めていました。
+そんなTowaPCですが、Scratchに参入したのは2024年05月21日、NECOPCとしてでした。
+「neonOS」(現在の構想名はnecoOS)のコンセプトと同時にNECOPCが誕生し、    OSを制作しています。残念ながらまだ完成には至っておりませんが、しかしながら私のデザインの起点はそこであったと考えています。
+現在も主にデザインのみを行っている現状ですが、今後実際に動作する製品を制作していこうと考えております。
+さて、今回Ros_project（Scratch名）様とのつながりでArielogic様と技術協力させていただけることになりました。本社所属グループの子会社である架空会社Nexrise様と協力し、全力で協力していく所存です。どうぞよろしくお願いいたします。</p>
+          </div><!--flex-->
+        </div>
+
+        <div class="padding-top40"></div>
+      </div><!--on-->
+      </div><!--center-->
+      </div><!--main-->
+  </body>
+</html>
