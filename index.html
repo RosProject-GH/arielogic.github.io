@@ -405,5 +405,15 @@ background-color: rgba(4, 17, 114, 0.4);
       </div><!--on-->
       </div><!--center-->
       </div><!--main-->
+      
+      <script>
+fetch("/components/footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+<div id="footer"></div>
+      
   </body>
 </html>
