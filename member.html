@@ -251,5 +251,15 @@ Softoriaの代表取締役。2023年からScratchを始め、@utina-ntyuとし�
       </div><!--on-->
       </div><!--center-->
       </div><!--main-->
+      
+      <script>
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+  });
+</script>
+<div id="footer"></div>
+      
   </body>
 </html>
